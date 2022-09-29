@@ -1,0 +1,57 @@
+SysName: sp_hw
+
+SW:
+ - {core: Nios, id: 1, process: [topmod]}
+
+HW:
+ - {core: FPGA, process: [conv1, conv2, mpool1, mpool2, aff1, aff2]}
+
+#HW_FREQ_MHZ = 50
+
+BlockingChannel:
+ - {name: start,  size: 8}
+ - {name: result,  size: 8}
+ - {name: conv1_mpool1,   size: 8, depth:  64}
+ - {name: mpool1_conv2,   size: 8, depth:  64}
+ - {name: conv2_mpool2,   size: 8, depth:  64}
+ - {name: mpool2_aff1,    size: 8, depth:  64}
+ - {name: aff1_aff2,      size: 8, depth:  64}
+
+MemoryChannel:
+ - {name: in_img_mem, size: 8, depth: 784}
+
+StandardProcess:
+ - name:    topmod
+   file:    [topmod.c]
+   ch(in):  [result]
+   ch(out): [start, in_img_mem]
+
+ - name:    conv1
+   file:    [conv1.c]
+   ch(in):  [start, in_img_mem]
+   ch(out): [conv1_mpool1]
+
+ - name:    mpool1
+   file:    [mpool1.c]
+   ch(in):  [conv1_mpool1]
+   ch(out): [mpool1_conv2]
+
+ - name:    conv2
+   file:    [conv2.c]
+   ch(in):  [mpool1_conv2]
+   ch(out): [conv2_mpool2]
+
+ - name:    mpool2
+   file:    [mpool2.c]
+   ch(in):  [conv2_mpool2]
+   ch(out): [mpool2_aff1]
+
+ - name:    aff1
+   file:    [aff1.c]
+   ch(in):  [mpool2_aff1]
+   ch(out): [aff1_aff2]
+
+ - name:    aff2
+   file:    [aff2.c]
+   ch(in):  [aff1_aff2]
+   ch(out): [result]

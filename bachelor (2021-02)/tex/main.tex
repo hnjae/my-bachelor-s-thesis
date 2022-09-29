@@ -1,0 +1,96 @@
+% !TEX program = xelatex
+% !TEX encoding = UTF-8
+
+\documentclass[a4paper,oneside,tilepage,report]{report}
+\usepackage{xltxtra}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Font Settings
+% \usepackage{xeCJK}
+\usepackage{fontspec}
+
+\setmainfont{Noto Serif}	% \rmfamily
+\setsansfont{Noto Sans}	% \sffamily
+\setmonofont{Noto Sans Mono}
+\newfontfamily{\ja}{Noto Serif CJK JP}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SETTINGS
+% \XeTeXlinebreaklocale "ja"
+\linespread{1.3}
+% linespread 1.3 : 1 and half
+
+% \setcounter{secnumdepth}{3}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \addtolength{\voffset}{-0.6cm}
+% \addtolength{\textheight}{1.2cm}
+
+% \addtolength{\hoffset}{-1.5cm}
+% \addtolength{\textwidth}{3cm}
+
+\addtolength{\hoffset}{-1.5cm}
+\addtolength{\textwidth}{3cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{ascmac}
+\include{packages}
+\include{prepListings}
+\newcommand{\Figref}[1]{\textbf{Figure~\ref{#1}}}
+\newcommand{\Tabref}[1]{\textbf{Table~\ref{#1}}}
+% \newcommand{\Listref}[1]{\textbf{Listing~\ref{#1}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{maketitle}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Efficient Hardware Design of Quantized DNN Inference Using HLS and DNN Framework}
+% \affiliate{NU}{Nagoya University, Nagoya, Aichi 464--8603, Japan}
+% \affiliate{NANZAN}{Nanzan University, Nagoya, Aichi 464--8673, Japan}
+\author{KIM Hyunjae}
+\date{\ja2021年 2月}
+% \date{2021年2月}
+% \author{Ryota Yamamoto}{NU}[]
+% \author{Shinya Honda}{NANZAN}[]
+% \author{Masato Edahiro}{NU}[]
+
+\begin{document}
+% textheight \the\textheight \\
+% textwidth \the\textwidth \\
+% linewidth \the\linewidth \\
+
+\maketitle
+\pagenumbering{roman}
+\input{abstract}
+
+%%%%%%%%%%
+\tableofcontents
+\listoffigures
+\listoftables
+%%%%%%%%%%
+
+\newpage
+\pagenumbering{arabic}
+
+\include{chpt1_introduction}
+\include{chpt2_related_work}
+\include{chpt3_preparation}
+\include{chpt4_model_design}
+\include{chpt5_case_study}
+\include{chpt6_conclusion}
+
+%%%%%%%%%%
+\newpage
+\bibliographystyle{unsrt}
+\bibliography{bib.bib}
+
+%%%%%%%%%%
+\newpage
+\input{acknowledgment}
+% \clearpage
+
+%%%%%%%%%%
+\input{lastpage}
+\end{document}

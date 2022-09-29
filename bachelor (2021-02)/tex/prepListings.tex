@@ -1,0 +1,47 @@
+% !TEX root = main.tex
+% !TEX encoding = UTF-8
+
+% Listings
+
+\usepackage{listings} % 코드 삽입 패키지
+\usepackage{color} % color 정의 패키지
+
+%%%% definition of things used in Listings
+
+% Scale=MatchLowercase,
+% ItalicFont={Source Han Code JP L It},
+% ItalicFeatures={FakeSlant}
+% BoldItalicFont={Source Han Code JP B lt},
+
+\newfontfamily\listingsfont{Noto Sans Mono}
+
+\definecolor{sh_comment}{rgb}{0.6, 0.6, 0.6}
+\definecolor{sh_keyword}{rgb}{0.69, 0.37, 0.00}  % Lucius
+\definecolor{sh_string}{rgb}{0.00, 0.37, 0.69}   % Lucius - Blue
+\def\lstsmallmath{\leavevmode\ifmmode \scriptstyle \else  \fi}
+\def\lstsmallmathend{\leavevmode\ifmmode  \else  \fi}
+
+%%%% Listings Settings %%%%
+\lstset {
+  breaklines=true,
+  numberstyle=\footnotesize,
+  numbers=left,
+%%%% TABS & Spaces %%%%
+  showspaces=false, showtabs=false, tabsize=8, showstringspaces=false,
+%%%% Frame & Caption %%%%
+  % captionpos=t, % caption position : t or b
+  frame = single, % top(t), bottom(b), l, L, r, R
+%%%% Color %%%%
+  stringstyle=\color{sh_string},
+  keywordstyle=\color{sh_keyword}\bfseries,
+  commentstyle=\color{sh_comment}\itshape,
+  rulesepcolor=\color{black},
+%%%% Style &&&&
+  % basicstyle=\listingsfont\small,
+  basicstyle=\listingsfont\small,
+  escapebegin={\lstsmallmath}, escapeend={\lstsmallmathend}
+}
+  % basicstyle=\listingsfont\footnotesize,
+
+% \renewcommand{\lstlistingname}{ソースコード}
+% \renewcommand{\lstlistlistingname}{ソースコード目次}

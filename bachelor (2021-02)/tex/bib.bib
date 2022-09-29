@@ -1,0 +1,221 @@
+@article{honda2005systembuilder,
+    title={{S}ystem{B}uilder: A system level design environment (in {J}apanese)},
+    author={Honda, Shinya and Tomiyama, Hiroyuki and Takada, Hiroaki},
+    journal={The IEICE Transactions on Information and Systems (Japanese Edition)},
+    volume={88},
+    number={2},
+    pages={163--174},
+    month={Feb.},
+    year={2005},
+    publisher={The Institute of Electronics, Information and Communication Engineers}
+}
+    journal={電子情報通信学会論文誌 D},
+    https://www.ieice.org/jpn/about/j_pdf/g_eng.pdf 参照．
+
+@inproceedings{honda2007rtos,
+  title={{RTOS} and codesign toolkit for multiprocessor systems-on-chip},
+  author={Honda, Shinya and Tomiyama, Hiroyuki and Takada, Hiroaki},
+  booktitle={2007 Asia and South Pacific Design Automation Conference},
+  pages={336--341},
+  year={2007},
+  organization={IEEE}
+}
+
+
+@inproceedings{dnnbuilder,
+  title = "{DNNB}uilder: An automated tool for building high-performance DNN hardware accelerators for FPGAs",
+  abstract = "Building a high-performance EPGA accelerator for Deep Neural Networks (DNNs) often requires RTL programming, hardware verification, and precise resource allocation, all of which can be time-consuming and challenging to perform even for seasoned FPGA developers. To bridge the gap between fast DNN construction in software (e.g., Caffe, TensorFlow) and slow hardware implementation, we propose DNNBuilder for building high-performance DNN hardware accelerators on FPGAs automatically. Novel techniques are developed to meet the throughput and latency requirements for both cloud- and edge-devices. A number of novel techniques including high-quality RTL neural network components, a fine-grained layer-based pipeline architecture, and a column-based cache scheme are developed to boost throughput, reduce latency, and save FPGA on-chip memory. To address the limited resource challenge, we design an automatic design space exploration tool to generate optimized parallelism guidelines by considering external memory access bandwidth, data reuse behaviors, FPGA resource availability, and DNN complexity. DNNBuilder is demonstrated on four DNNs (Alexnet, ZF, VGG16, and YOLO) on two FPGAs (XC7Z045 and KU115) corresponding to the edge- and cloud-computing, respectively. The fine-grained layer-based pipeline architecture and the column-based cache scheme contribute to 7.7x and 43x reduction of the latency and BRAM utilization compared to conventional designs. We achieve the best performance (up to 5.15x faster) and efficiency (up to 5.88x more efficient) compared to published FPGA-based classification-oriented DNN accelerators for both edge and cloud computing cases. We reach 4218 GOPS for running object detection DNN which is the highest throughput reported to the best of our knowledge. DNNBuilder can provide millisecond-scale real-time performance for processing HD video input and deliver higher efficiency (up to 4.35x) than the GPU-based solutions.",
+  author = "Xiaofan Zhang and Junsong Wang and Chao Zhu and Yonghua Lin and Jinjun Xiong and Hwu, {Wen Mei} and Deming Chen",
+  year = "2018",
+  month = nov,
+  day = "5",
+  doi = "10.1145/3240765.3240801",
+  language = "English (US)",
+  series = "IEEE/ACM International Conference on Computer-Aided Design, Digest of Technical Papers, ICCAD",
+  publisher = "Institute of Electrical and Electronics Engineers Inc.",
+  booktitle = "2018 IEEE/ACM International Conference on Computer-Aided Design, ICCAD 2018 - Digest of Technical Papers",
+  address = "United States",
+  note = "37th IEEE/ACM International Conference on Computer-Aided Design, ICCAD 2018 ; Conference date: 05-11-2018 Through 08-11-2018",
+}
+@article{zhang2020dnnexplorer,
+  title={DNNExplorer: A Framework for Modeling and Exploring a Novel Paradigm of FPGA-based DNN Accelerator},
+  author={Zhang, Xiaofan and Ye, Hanchen and Wang, Junsong and Lin, Yonghua and Xiong, Jinjun and Hwu, Wen-mei and Chen, Deming},
+  journal={arXiv preprint arXiv:2008.12745},
+  year={2020}
+}
+
+@misc{tfl_m,
+    author = "Google LLC",
+    title = "TensorFlow Lite for Microcontrollers",
+    howpublished="\url{https://www.tensorflow.org/lite/microcontrollers}. Accessed: 2020-11-16"
+}
+
+@misc{mnist,
+  author       = "LeCun, Yann and Cortes, Corinna and Burges, Christopher J.C.",
+  title        = {{The MNIST Database}},
+  howpublished = {\url{http://yann.lecun.com/exdb/mnist/}. Accessed: 2020-11-18}
+}
+
+@misc{curucialmemory,
+    author = "{Micron Technology, Inc.}",
+    title = "Memory Speeds and Compatibility",
+    howpublished = "\url{https://www.crucial.com/support/memory-speeds-compatability}. Accessed: 2020-11-19"
+}
+@misc{microngddr6,
+    author = "{Micron Technology, Inc.}",
+    title = "{GDDR6X}",
+    howpublished = "\url{https://www.micron.com/products/ultra-bandwidth-solutions/gddr6x}. Accessed: 2020-11-19"
+}
+
+
+@misc{pynq,
+  author       = {Xilinx{,} Inc.},
+  title        = {{PYNQ - Python productivity for Zynq}},
+  howpublished = {\url{http://www.pynq.io/}. Accessed: 2020-11-19}
+}
+
+@misc{webpage:nnc_project,
+    author = "Sony Network Communications Inc.",
+    title = "Project - Neural Network Console",
+    howpublished = {\url{https://dl.sony.com/project/}. Accessed: 2020-11-19}
+}
+
+@manual{man:nnc,
+  title = "Neural Network Console Version 1.80 Instruction Manual",
+  author = "Sony Network Communications Inc.",
+  year = "2020"
+}
+
+@manual{man:systembuilder,
+  title = "SystemBuilder User Manual (in {J}apanese)",
+  author = "Graduate School of Informatics, Nagoya University",
+  year = "2020"
+}
+
+
+@misc{sdsoc,
+  author       = {Xilinx{,} Inc.},
+  title        = {{SDSoC Development Environment}},
+  howpublished = {\url{https://www.xilinx.com/products/design-tools/software-zone/sdsoc.html}. Accessed: 2020-11-19}
+}
+
+
+@inproceedings{honda2004rtos,
+  title={{RTOS}-centric hardware/software cosimulator for embedded system design},
+  author={Honda, Shinya and Wakabayashi, Takayuki and Tomiyama, Hiroyuki and Takada, Hiroaki},
+  booktitle={Proceedings of the 2nd IEEE/ACM/IFIP international conference on Hardware/software codesign and system synthesis},
+  pages={158--163},
+  year={2004}
+}
+
+@article{ccetin2015application,
+  title={An application of multilayer neural network on hepatitis disease diagnosis using approximations of sigmoid activation function.},
+  author={{\c{C}}etin, Onursal and Temurta{\c{s}}, Feyzullah and G{\"u}lg{\"o}n{\"u}l, {\c{S}}enol},
+  journal={Dicle Medical Journal/Dicle Tip Dergisi},
+  volume={42},
+  number={2},
+  year={2015}
+}
+
+
+@article{blott2018finn,
+  title={{FINN-R}: An {E}nd-to-{E}nd {D}eep-{L}earning {F}ramework for {F}ast {E}xploration of {Q}uantized {N}eural {N}etworks},
+  author={Blott, Michaela and Preu{\ss}er, Thomas B and Fraser, Nicholas J and Gambardella, Giulio and O’brien, Kenneth and Umuroglu, Yaman and Leeser, Miriam and Vissers, Kees},
+  journal={TRETS 2018},
+  volume={11},
+  number={3},
+  pages={16},
+  year={2018},
+  publisher={ACM}
+}
+
+
+@inproceedings{umuroglu2017finn,
+  title={{FINN}: A {F}ramework for {F}ast, {S}calable {B}inarized {N}eural {N}etwork {I}nference},
+  author={Umuroglu, Yaman and Fraser, Nicholas J and Gambardella, Giulio and Blott, Michaela and Leong, Philip and Jahre, Magnus and Vissers, Kees},
+  booktitle={FPGA 2017},
+  pages={65--74},
+  year={2017},
+  organization={ACM}
+}
+
+
+@inproceedings{yonekawa2017chip,
+  title={On-chip memory based binarized convolutional deep neural network applying batch normalization free technique on an {FPGA}},
+  author={Yonekawa, Haruyoshi and Nakahara, Hiroki},
+  booktitle={IPDPSW 2017},
+  pages={98--105},
+  year={2017},
+  organization={IEEE}
+}
+
+@inproceedings{nakahara2017fully,
+  title={A fully connected layer elimination for a binarizec convolutional neural network on an {FPGA}},
+  author={Nakahara, Hiroki and Fujii, Tomoya and Sato, Shimpei},
+  booktitle={FPL 2017},
+  pages={1--4},
+  year={2017},
+  organization={IEEE}
+}
+
+@inproceedings{waka,
+  title        = {{CyberWorkBench}: integrated design environment based on C-based behavior synthesis and verification},
+  author       = {Wakabayashi, Kazutoshi},
+  booktitle    = {In VLSI Design, Automation and Test, 2005. (VLSI-TSA-DAT)},
+  pages        = {173--176},
+  year         = {2005},
+  organization = {IEEE}
+}
+
+@misc{vivadohls,
+  author       = {Xilinx{,} Inc.},
+  title        = {{Vivado High-Level Synthesis}},
+  howpublished = {\url{https://www.xilinx.com/products/design-tools/vivado/integration/esl-design.html}. Accessed: 2020-9-26}
+}
+
+@misc{iso:c17,
+  author= {ISO},
+  title = {{ISO}/{IEC} 9899:2018 - {I}nformation technology — {P}rogramming languages — {C}},
+  year = {2018}
+}
+
+@misc{sony-nnabla,
+  author = "Sony Network Communications Inc.",
+  title = {{N}eural {N}etwork {L}ibraries},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/sony/nnabla}. Accessed: 2021-01-23}
+}
+
+@misc{tensorflow,
+  author = "Google LLC",
+  title = "TensorFlow",
+  howpublished = {\url{https://www.tensorflow.org/}. Accessed: 2021-01-30}
+}
+
+@misc{pytorch,
+  author ="Facebook{,} Inc.",
+  title = "{P}y{T}orch",
+  howpublished = {\url{https://pytorch.org}. Accessed: 2021-01-30}
+}
+
+@incollection{sakamura1987itron,
+  title={{ITRON}: An overview},
+  author={Sakamura, Ken},
+  booktitle={TRON Project 1987 Open-Architecture Computer Systems},
+  pages={29--34},
+  year={1987},
+  publisher={Springer}
+}
+
+@misc{autosar,
+  author = "AUTOSAR Partners",
+  title = "{AUTOSAR} {C}lassic {P}latform",
+  howpublished = {\url{https://www.autosar.org/standards/classic-platform/}. Accessed 2021-01-31}
+}
+
+@misc{imagemagick,
+  author = "{I}mageMagick {S}tudio {LLC}",
+  title = "ImageMagick",
+  howpublished = {\url{https://imagemagick.org/script/index.php}. Accessed 2021-02-12}
+}

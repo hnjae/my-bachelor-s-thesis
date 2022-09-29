@@ -1,0 +1,34 @@
+% !TEX root = main.tex
+% !TEX encoding = UTF-8
+
+\chapter{Conclusion}
+
+\section{Summary}
+
+In this paper, we review the possibility of implementing existing DNN frameworks. To achieve this, we implement three networks created and trained from NNC. In order not to use floating-point arithmetic and have the same inference result, all the data in the network was quantized from the stage of training.
+
+For the first two case studies, we confirm that inferences from implementation were the same as those from NNC. However third case study shows the inference did not match exactly. This is an area that must be fixed through further research.
+
+We test two approaches for finding out an efficient design. One is pipelining the matrix array (Logistic Regression), and the other is pipelining the layers (Binary CNN). As a result, we found performance gain.
+
+
+
+\section{Future Work}
+We believe that contribution of this paper will help in the future development of a tool that automatically implements the network from NNC. This tool's image is presented in \Figref{fig:autotool}. The development of this tool is our final goal.
+
+These are some works that should be done in the future for this goal.
+\begin{itemize}
+  \item Find out the reason why the inference results are different in LeNet.
+  \item Optimize each layer using the feature provided by HLS, such as pipelining the loop. In which explained in section \ref{sec:hwsynthesis}.
+  \item Test various communication primitives described in section \ref{sec:communication_primitives}.
+  \item Implement every layer that NNC supports.
+  \item Build a tool that extracts network structures and create files for SystemBuilder.
+  \item Explore a design of the network and make the optimal decision.
+\end{itemize}
+
+\begin{figure}[btp]
+\centering
+\includegraphics[width=0.58\textwidth]{automated_tool.eps}
+\caption{Automated tool}
+\label{fig:autotool}
+\end{figure}

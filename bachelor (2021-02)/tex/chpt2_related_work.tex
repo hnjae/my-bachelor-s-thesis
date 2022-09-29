@@ -1,0 +1,39 @@
+% !TEX root = main.tex
+% !TEX encoding = UTF-8
+
+\chapter{Related Work}
+\section{DNNExplorer}
+There are various studies on customized DNN accelerators using FPGAs.
+Zhang and Ye study methods to explorer optimal FPGA design in \cite{zhang2020dnnexplorer}. They develop a framework named DNNExplorer for modeling and exploring a design. They claim that existing FPGA-based DNN accelerators typically fall into two design paradigms. The one is a paradigm that adopts a generic reusable architecture to support various DNN networks. A generic reusable architecture means this design sacrifices further performance and efficiency for generic reuse. The other design paradigm is a paradigm that adopts a layer-wise tailor-made architecture to optimize a layer-specific demand. Each layer in this design is combined into pipeline implementation. This design loses scalability as it has a limited number of DNN layers that can be supported. Moreover, deeper DNN means fewer resources for each layer, which might lead to performance degradation.
+
+The key idea of DNNExplorer is to use both paradigms simultaneously. DNNExplorer utilizes the second's pipeline design for the first up to the split-point (SP) layer and uses the first's generic accelerator for the rest. DNNExplorer explores design architecture to find out optimal split-point, and it maps resources for each design architecture.
+
+% As we discussed in the Introduction, our final goal, including the work in this paper, is to create a tool to automatically implements the network from NNC.
+% We believe this approach is a worthy reference for our model's future design exploration.
+We believe this approach is an excellent reference for further design exploration in our model.
+
+\section{Other implementations of a DNN Framework}
+% Added by Yamamoto
+% Xilinx社は，HLSツールのVivado HLSと連携して動作するDNN開発環境として，FINN [10]やFINN-R[11]を発表している．
+FINN is one of the DNN framework for an FPGA by Xilinx, Inc \cite{umuroglu2017finn,blott2018finn}.
+% パラメータのビット精度を指定して学習を行うことができ，FPGAへの実装までをサポートしている．
+This framework targets quantized neural network, and the framework provides a training environment to set bit width.
+%また，Xilinx社は，PYNQ (PYNQ: Python productivityfor ZYNQ )*1を発表している．
+% これは，ハードウェアプラットフォームであるが，開発環境も公開されており，Python言語を利用してFPGAによるDNN推論することが可能である．
+Moreover, PYNQ (Python productivity for ZYNQ)\cite{pynq} is a hardware platform to develop DNN inference applications in Python.
+% また，Jupyter notebookによりブラウザ上から容易にFPGAによるDNN推論を実行できる．
+% Developers can develop DNN inference more easily because they can develop it on a browser with a Jupyter notebook.
+Developers can develop DNN inference more quickly because they can develop it on a browser with a Jupyter notebook.
+However, our research differs in that we aim to implement a machine learning model generated in a DNN framework that does not target FPGAs.
+
+
+% また，Nakaharaらは，GUINNESS (GUI based NeuralNetwork Environment SyntheSizer)を開発した[12][13]．
+Nakahara et al. developed GUINNESS (GUI-based Neural Network Environment SyntheSizer) for DNN inference on an FPGA \cite{nakahara2017fully,yonekawa2017chip}.
+% GUINNESSもChainerによる学習フロントエンドを提供しており，学習から高位合成用C++ソースコードの生成までをサポートしている．
+GUINNESS also provides train front-end with Chainer and supports from training to C++ code for HLS.
+% 生成されるC++のソースコードは，SDSoC向けであり，Linux上で動作する．
+The C++ code is inputted to SDSoC \cite{sdsoc}, then HDL codes are generated for target FPGA.
+% 本稿では，Linuxではなく，小規模かつ低オーバヘッドなRTOSと推論器が連携して動作する．
+The hardware receives an activation from Linux on CPU; however, it co-work with small-scale and low overhead RTOS.
+% そのため，リアルタイム性が要求されるシステムや車載システムにおいては，我々のフレームワークの方が適している可能性がある．
+Therefore, our framework has advantages for real-time systems and automotive systems.
